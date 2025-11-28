@@ -1,0 +1,98 @@
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --accent:#4b35c3;
+  --muted:#6b7280;
+  --danger:#d9534f;
+  --radius:8px;
+  --maxw:900px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:var(--bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:20px;
+}
+
+.topbar{
+  background:white;
+  border-bottom:1px solid #eee;
+}
+.topbar .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{margin:0; padding:14px 0; font-size:1.1rem; color:var(--accent)}
+
+.topbar nav a{ margin-left:14px; color:var(--muted); text-decoration:none}
+
+.hero{
+  padding:40px 0;
+  background: linear-gradient(180deg, rgba(75,53,195,0.06), rgba(255,255,255,0));
+}
+.hero-grid{ display:grid; grid-template-columns:1fr 360px; gap:20px; align-items:center}
+.hero .btn{ margin-top:12px }
+
+.narrow{ max-width:720px }
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:0 6px 18px rgba(15,15,15,0.03);
+}
+
+label{ display:block; margin-bottom:12px; font-size:0.95rem }
+input[type="text"], input[type="password"], select, textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:6px;
+  border:1px solid #e6e7ee;
+  margin-top:6px;
+  font-size:1rem;
+}
+
+.row{ display:flex; gap:10px }
+.row label{ flex:1 }
+
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn[disabled]{ opacity:0.6; cursor:not-allowed }
+
+.muted{ color:var(--muted); font-size:0.95rem; margin-top:10px }
+.message{ margin-top:10px; min-height:1.2rem }
+.message.error{ color:var(--danger) }
+.result-box{
+  min-height:80px;
+  padding:12px;
+  border-radius:6px;
+  border:1px dashed #e6e7ee;
+  background:#fbfbff;
+  white-space:pre-wrap;
+}
+
+.footer{ padding:20px 0; text-align:center; color:var(--muted); font-size:0.9rem; margin-top:30px }
+
+@media (max-width:900px){
+  .hero-grid{ grid-template-columns:1fr }
+  .row{ flex-direction:column }
+}

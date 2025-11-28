@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Connexion — TalAIt Translate</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1 class="brand">TalAIt Translate</h1>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <h2>Connexion</h2>
+    <form id="loginForm" class="card">
+      <label>
+        Nom d'utilisateur
+        <input type="text" id="username" name="username" required />
+      </label>
+      <label>
+        Mot de passe
+        <input type="password" id="password" name="password" required />
+      </label>
+      <button type="submit" class="btn">Se connecter</button>
+      <p class="muted">Pas de compte ? <a href="signup.html">S'inscrire</a></p>
+      <div id="loginMessage" class="message"></div>
+    </form>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // initialize login form behavior
+    authInit({ formId: "loginForm", mode: "login" });
+  </script>
+</body>
+</html>
